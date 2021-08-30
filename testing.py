@@ -7,7 +7,7 @@ import requests
 
 
 # Save string of image file path below
-img_filepath = "<path/to/image.jpg>"
+img_filepath = "D:\\jestrada\\Downloads\\210829012624-b19afd8b07f044cb80716f0f770f29b9l.jpg"
 
 # Create base64 encoded string
 with open(img_filepath, "rb") as f:
@@ -16,7 +16,8 @@ with open(img_filepath, "rb") as f:
 # Get response from POST request
 # Update the URL as needed
 response = requests.post(
-    url="http://localhost:5000/predict",
+    #url="http://localhost:5000/predict",
+    url="https://flask-server-pq0szxnhu-jorgelig.vercel.app/predict",
     json={"image": image_string},
 )
 data = response.json()
